@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presupuesto ya</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <nav class="navbar blue z-depth-4">
+      <h2>Presupuesto ya</h2>
+    </nav>
+
+    <div class="main">
+        <fieldset>
+            <form>
+                <div>
+                    <label for="capital">TOTAL DEL VIAJE 
+                        <input type="text" placeholder="Ingrese el capital prestado" id="capital">
+                        <i class="fas fa-coins"></i>
+                    </label>
+                </div>
+                <div>
+                    <label for="couta">CANTIDAD DE COUTAS 
+                        <input type="text" placeholder="Ingrese las cuotas del prestamo" id="couta">
+                        <i class="far fa-calendar-alt"></i>
+                    </label>
+                </div>
+             
+            </form>
+        <button onclick="gen_table();">CALCULAR</button>
+        </fieldset>
+
+      
+    </div>
+    <br>
+    <hr>
+    <br>
+    <table class="tab">
+        <thead>
+            <tr>
+                <td>NRO</td>
+                <td>CAPITAL</td>
+                <td>INTERES</td>
+                <td>IMPORTE A PAGAR</td>
+            </tr>
+        </thead>
+        <tbody id="tab">
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="ft">TOTAL</td>
+                <td id="t1"></td>
+                <td id="t2"></td>
+                <td id="t3"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="container">
+      <div class="icons">
+        <h5><i class="fas fa-plane"></i></h5>
+        <h5><i class="fas fa-wallet"></i></h5> 
+        <h5><i class="fas fa-money-bill-wave-alt"></i></h5>  
+      </div>
+      
+      <div class="data">
+        <div class="result" id="result"></div>
+      </div>
+    </div>
+
+
+
+    <script src="calc.js"></script>
+  </body>
+</html>
